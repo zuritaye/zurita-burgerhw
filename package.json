@@ -1,0 +1,29 @@
+{
+  "name": "burgerlogger",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "hbs": "~4.0.1",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "mysql": "github:mysqljs/mysql",
+    "mysql2": "^1.6.1",
+    "orm": "^5.0.2",
+    "router-express": "^1.5.2",
+    "sequelize": "^4.38.0"
+  },
+  "main": "server.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
