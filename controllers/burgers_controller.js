@@ -6,11 +6,18 @@ var burger = require("../models/burger.js");
 
 router.get("/", function(req, res) {
   // GET all burger
-  burger.all(function(data) {
-    var hasObject = { burgers: data };
-    res.render("index", hasObject);
-  })
+  res.redirect("/burgers");
+  // burger.all(function(data) {
+  //   var hasObject = { burgers: data };
+  //   res.render("index", hasObject);
+  //})
 });
+router.get("/burgers", function(req, res){
+  burger.all(function(data){
+    res.render("index", {burgers: data});
+  });
+  
+})
 
 router.get("/api/burgers", function(req, res) {
   // GET api

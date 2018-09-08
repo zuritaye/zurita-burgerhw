@@ -24,7 +24,9 @@
                 <ul>
                     {{#each burgers}} 
                         {{#unless this.devoured}} 
-                            <div class="card item">{{> burger-block devoured=false}}</div>
+                            <span class="label col-2">{{id}}</span> 
+		                    <span class="label col-7">{{burger_name}}</span>
+                            <button class="devour" data-id="{{id}}" data-devoured="{{devoured}}">DEVOUR</button>
                         {{/unless}} 
                     {{/each}}
                 </ul>
@@ -36,7 +38,7 @@
                 <ul>
                     {{#each burgers}} 
                         {{#if this.devoured}} 
-                            <div class="card item">{{> burger-block devoured=true}}</div>
+                            {{!-- <div class="card item">{{> burger-block devoured=true}}</div> --}}
                         {{/if}} 
                     {{/each}}
                 </ul>
